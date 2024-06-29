@@ -2,4 +2,4 @@
 Este repositorio contiene los cursos de Platzi que voy realizando
 
 ## Cursos
-1. Curso de Python: PIP y Entornos Virtuales
+- [Curso de Python: PIP y Entornos Virtuales](./PIP_y_Entornos_Virtuales/)
