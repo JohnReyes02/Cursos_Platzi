@@ -29,7 +29,7 @@ pip3 -V
 sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
 ```
 
-- Los anteriores fueron los pasos para tener Python en un entorno profesional.
+Los anteriores fueron los pasos para tener Python en un entorno profesional.
 
 
 
