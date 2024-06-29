@@ -5,9 +5,18 @@
 
 ## Objetivo de la lección
 - [x] Instalar Python en Windows.
-- [] Instalar Python en Linux
+- [x] Instalar Python en Linux
 
-- Instalar el gestor de dependencias en Python:
+## Instalación
+- Instalación de Python:
+```bash
+sudo apt update && sudo apt -y upgrade
+```
+- Verificar la Instalación de Python:
+```bash
+python3 -V
+```
+- Instalar el paquete gestor de dependencias en Python:
 ```bash
 sudo apt install -y python3-pip
 ```
