@@ -20,10 +20,16 @@ python3 -V
 ```bash
 sudo apt install -y python3-pip
 ```
-- Verificar la version de la instalación:
+- Verificar la version de la instalación sea correcta:
 ```bash
 pip3 -V
 ```
+- Instalación de dependencias para un entorno profesional:
+```bash
+sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+```
+
+- Los anteriores fueron los pasos para tener Python en un entorno profesional.
 
 
 
