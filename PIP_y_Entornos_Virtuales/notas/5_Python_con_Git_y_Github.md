@@ -96,6 +96,8 @@ git commit -m "add files"
 git push origin main
 ```
 
+Con todo lo anterior tenemos enlazado nuestro proyecto en GitHub
+
 ## Archivos de clase
 
 -
