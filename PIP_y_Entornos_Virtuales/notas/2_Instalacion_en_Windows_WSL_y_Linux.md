@@ -5,7 +5,7 @@
 
 ## Objetivo de la lección
 - [x] Instalar Python en Windows.
-- [x] Instalar Python en Linux
+- [] Instalar Python en Linux
 
 - Instalar el gestor de dependencias en Python:
 ```bash
