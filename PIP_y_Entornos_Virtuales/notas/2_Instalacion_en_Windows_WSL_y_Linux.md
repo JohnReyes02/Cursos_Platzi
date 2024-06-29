@@ -3,6 +3,10 @@
 ## Fecha
 **Fecha de la lección:** 2024-06-29
 
+## Objetivo de la lección
+- [x] Instalar Python en Windows.
+- [x] Instalar Python en Linux
+
 - Instalar el gestor de dependencias en Python:
 ```bash
 sudo apt install -y python3-pip
