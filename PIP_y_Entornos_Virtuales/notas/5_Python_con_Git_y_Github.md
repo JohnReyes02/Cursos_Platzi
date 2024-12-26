@@ -98,6 +98,26 @@ git push origin main
 
 Con todo lo anterior tenemos enlazado nuestro proyecto en GitHub
 
+**Nota**:
+Al utilizar el comando:
+```bash
+git push origin main
+```
+Se puede presentar un error de autenticación. Para solucionarlo es necesario realizar los siguientes pasos:
+- Ir a github
+- Settings
+- Developer settings
+- Personal acces token
+- Tokens (classic)
+- Generate new token
+- copiar el nuevo token
+- Ir nuevamente a la terminal y ejecutar el comando:
+```bash
+git push origin main
+```
+- En usuario ingresar el usuario de Github 
+- En el password pegar el codigo del token
+
 ## Archivos de clase
 
 -
