@@ -1,0 +1,51 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: 'Curso de Visualización de Datos con Matplotlib y Seaborn'
+  reader-mode: false
+
+  sidebar: 
+    style: docked
+    search: true
+
+  # Repositorio de GitHub
+  repo-url: https://github.com/JohnReyes02/Cursos_Platzi
+  repo-subdir: visualizacion_de_datos_con_matplotlib_y_seaborn
+  repo-branch: main
+  repo-actions: [edit, issue, source]
+
+  sharing: [twitter, linkedin]
+
+  chapters: 
+    - index.qmd
+    - part: Matplotlib
+      chapters: 
+        - matplotlib/01_pyplot.ipynb
+        - matplotlib/02_subplot.ipynb
+        - matplotlib/03_orientado_a_objetos.ipynb
+        - matplotlib/04_subplots.ipynb
+        - matplotlib/05_leyendas_etiquetas.ipynb
+        - matplotlib/06_Colores_y_estilos.ipynb
+        - matplotlib/07_Bar_plot.ipynb
+        - matplotlib/08_Otros_graficos.ipynb
+    - part: Seaborn
+      chapters: 
+        - seaborn/00_seaborn.ipynb
+        - seaborn/01_set.ipynb
+        - seaborn/02_parametros.ipynb
+        - seaborn/03_Distribuciones.ipynb
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    code-link: false
+    toc: true
+    toc-title: Contenido
+    number-sections: true
+    code-copy: true
+    code-overflow: wrap
+    fig-align: center
