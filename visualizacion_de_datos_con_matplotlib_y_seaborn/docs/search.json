@@ -34,7 +34,7 @@
   {
     "objectID": "matplotlib/02_subplot.html",
     "href": "matplotlib/02_subplot.html",
-    "title": "Subplot",
+    "title": "2  Subplot",
     "section": "",
     "text": "import matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\ny = x ** 2\nx\n\narray([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5, 4. , 4.5, 5. ])\n\n\n\nplt.subplot(1, 2, 1)\nplt.plot(x, y, 'r--')\nplt.subplot(1, 2, 2)\nplt.hist(y)\nplt.show()\n\n\n\n\n\n\n\n\n\nplt.subplot(1, 2, 1)\nplt.plot(x, y, 'r--')\nplt.plot(y, x, 'b:')\nplt.subplot(1, 2, 2)\nplt.pie(y)\nplt.show()\n\n\n\n\n\n\n\n\n\nplt.subplot(2, 1, 1)\nplt.plot(x, y, 'r--')\nplt.plot(y, x, 'b:')\nplt.subplot(2, 1, 2)\nplt.hist(y)\nplt.show()",
     "crumbs": [
@@ -45,9 +45,9 @@
   {
     "objectID": "matplotlib/03_orientado_a_objetos.html",
     "href": "matplotlib/03_orientado_a_objetos.html",
-    "title": "Método orientado a objetos",
+    "title": "3  Método orientado a objetos",
     "section": "",
-    "text": "Pyplot\n\nRápido\nFácil\nUna sola figura\n\n\n\nOrientado a objetos\n\nMayor personalización\nMás código\nMás amigable a múltiples diagramas\n\nUn objeto define una figura, esa figura es un lienzo en el cual podemos introducri diferenctes gráficas(axes), de las cuales cada una posee sus propios ejes (axis).\nLa figura representa el todo, dentro de ella vamos a configurara gráficas las cuales conteine diferentes ejes.\n\n\n\nimage.png\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\ny = x ** 2\n\n\n\nMétodo orientado a objetos\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.5, 0.9])\naxes.plot(x, y, 'b')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\2545703584.py:4: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()\n\n\n\n\n\n\n\n\n\nEsta forma me da ventajas cuando quiero hacer algo más específico.\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.8, 0.9]) # [ubicacion ubicacion tamaño tamaño]\naxes2 = fig.add_axes([0.2, 0.55, 0.4, 0.3])\n\naxes.plot(x, y, 'b')\naxes2.plot(y, x, 'r')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\1999792158.py:7: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()\n\n\n\n\n\n\n\n\n\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.8, 0.9])\naxes2 = fig.add_axes([0.2, 0.55, 0.4, 0.3])\n\naxes.plot(x, y, 'b')\naxes2.plot(y, x, 'r')\naxes2.set_facecolor('gray')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\1237668884.py:8: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()",
+    "text": "3.1 Pyplot",
     "crumbs": [
       "Matplotlib",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Método orientado a objetos</span>"
@@ -56,7 +56,7 @@
   {
     "objectID": "matplotlib/04_subplots.html",
     "href": "matplotlib/04_subplots.html",
-    "title": "Subplots",
+    "title": "4  Subplots",
     "section": "",
     "text": "import matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\ny = np.sin(x)\n\n\nfig , axes = plt.subplots(nrows=1, ncols=2)\naxes[0].plot(x, y, 'b')\naxes[1].plot(y, x, 'r')\n\n\n\n\n\n\n\n\nDefiniendo previamente la salida de los arrays:\n\nfig , (ax1, ax2) = plt.subplots(nrows=1, ncols=2)\nax1.plot(x, y, 'b')\nax2.plot(y, x, 'r')\n\n\n\n\n\n\n\n\n\nfig , axes = plt.subplots(2, 4)\naxes[0,0].plot(x, np.cos(x))\naxes[0,1].plot(x, np.sin(x), 'y')\naxes[0,2].plot(x, np.tan(x), 'r')\naxes[0,3].plot(x, np.cos(x)**2)\n\n\n\n\n\n\n\n\n\nfig , ((ax1, ax2, ax3, ax4), (ax5, ax6, ax7, ax8)) = plt.subplots(2, 4)\nax1.plot(x, np.cos(x))\nax2.plot(x, np.sin(x), 'y')\nax3.plot(x, np.tan(x), 'r')\nax4.plot(x, np.cos(x)**2)\nfig.tight_layout() # mejora la grafica\n\n\n\n\n\n\n\n\n\nfig , ((ax1, ax2, ax3, ax4), (ax5, ax6, ax7, ax8)) = plt.subplots(2, 4, figsize=(8,4))\nax1.plot(x, np.cos(x))\nax2.plot(x, np.sin(x), 'y')\nax3.plot(x, np.tan(x), 'r')\nax4.plot(x, np.cos(x)**2)\nax5.plot(x, np.cos(x))\nax6.plot(x, np.sin(x), 'y')\nax7.plot(x, np.tan(x), 'r')\nax8.plot(x, np.cos(x)**2)\nfig.tight_layout() # mejora la grafica\n\n\n\n\n\n\n\n\nA continuación se muestra un ejemplo realizado por un alumno en los comentarios:\n\nplt.style.use('_mpl-gallery')\n\nfig , axes = plt.subplots(2, 3, constrained_layout=True, figsize=(8,4))\n\n# Funciones\nx = np.linspace(0, 10, 100)\ny = 4 + 2 * np.sin(2 * x)\n# plot\naxes[0,0].title.set_text('Plot')\naxes[0,0].plot(x, y, linewidth=2)\naxes[0,0].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\n# Funciones\nx = 4 + np.random.normal(0, 2, 24)\ny = 4 + np.random.normal(0, 2, len(x))\nsizes = np.random.uniform(15, 80, len(x))\ncolors = np.random.uniform(15, 80, len(x))\n# Scatter\naxes[0,1].title.set_text('Scatter')\naxes[0,1].scatter(x, y, s=sizes, c=colors, vmin=0, vmax=100)\naxes[0,1].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\n# Funciones\nnp.random.seed(3)\nx = 0.5 + np.arange(8)\ny = np.random.uniform(2, 7, len(x))\n# bar, barh\naxes[0,2].title.set_text('Bar')\naxes[0,2].bar(x, y, width=1, edgecolor='white', linewidth=0.7)\naxes[0,2].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\n# Funciones\nnp.random.seed(3)\nx = 0.5 + np.arange(8)\ny = np.random.uniform(2, 7, len(x))\n# stem\naxes[1,0].title.set_text('Stem')\naxes[1,0].stem(x, y)\naxes[1,0].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\n# Funciones\nnp.random.seed(3)\nx = 0.5 + np.arange(8)\ny = np.random.uniform(2, 7, len(x))\n# stem\naxes[1,1].title.set_text('Step')\naxes[1,1].step(x, y, linewidth=2.5)\naxes[1,1].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\n# Funciones\nnp.random.seed(1)\nx = np.linspace(0, 8, 16)\ny1 = 3 + 4*x/8 + np.random.uniform(0.0, 0.5, len(x)) \ny2 = 1 + 2*x/8 + np.random.uniform(0.0, 0.5, len(x)) \n# fill_Between\naxes[1,2].title.set_text('Fill_Between')\naxes[1,2].fill_between(x, y1, y2, alpha=0.5, linewidth=0)\naxes[1,2].plot(x, (y1 + y2) / 2, linewidth=2)\naxes[1,2].set(xlim=(0, 8), xticks=np.arange(1, 8),\n              ylim=(0, 8), yticks=np.arange(1, 8))\n\nplt.show()",
     "crumbs": [
@@ -67,7 +67,7 @@
   {
     "objectID": "matplotlib/05_leyendas_etiquetas.html",
     "href": "matplotlib/05_leyendas_etiquetas.html",
-    "title": "Leyendas, etiquetas, títulos, tamaño",
+    "title": "5  Leyendas, etiquetas, títulos, tamaño",
     "section": "",
     "text": "import matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\ny = np.sin(x)\n\n\nfig, axes = plt.subplots(1, 2, figsize=(5,5))\n\naxes[0].plot(x, y, label='$sin(x)$')\naxes[0].set_title('Relacion X - Y') # Para colocar un titulo a la figura\naxes[0].set_xlabel('X') # Para colocar el nombre al eje x\naxes[0].set_ylabel('Y') # Para cololar el nombre al eje y\naxes[0].legend() # para mostrar los labels definidos arriba\n\naxes[1].plot(y, x)\naxes[1].set_title('Relacion Y - X')\naxes[1].set_xlabel('Y')\naxes[1].set_ylabel('X')\n\nText(0, 0.5, 'X')\n\n\n\n\n\n\n\n\n\nSin el método orientado a objetos\n\nplt.plot(x, y, label='$sin(x)$')\nplt.title('Este es un titulo')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.legend(loc='lower left', bbox_to_anchor=(1,0.9))\nplt.show()",
     "crumbs": [
@@ -78,7 +78,7 @@
   {
     "objectID": "matplotlib/06_Colores_y_estilos.html",
     "href": "matplotlib/06_Colores_y_estilos.html",
-    "title": "Colores y Estilos",
+    "title": "6  Colores y Estilos",
     "section": "",
     "text": "import matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\n\n\nprint(plt.style.available) # Para ver los diferentes estilos que podemos dar a las gráficas\n\n['Solarize_Light2', '_classic_test_patch', '_mpl-gallery', '_mpl-gallery-nogrid', 'bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-v0_8', 'seaborn-v0_8-bright', 'seaborn-v0_8-colorblind', 'seaborn-v0_8-dark', 'seaborn-v0_8-dark-palette', 'seaborn-v0_8-darkgrid', 'seaborn-v0_8-deep', 'seaborn-v0_8-muted', 'seaborn-v0_8-notebook', 'seaborn-v0_8-paper', 'seaborn-v0_8-pastel', 'seaborn-v0_8-poster', 'seaborn-v0_8-talk', 'seaborn-v0_8-ticks', 'seaborn-v0_8-white', 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']\n\n\n\n#plt.style.use('bmh') # seleccionamos un estilo para la gráfica\nplt.style.use('dark_background') # \n\n\nfig, ax = plt.subplots(figsize=(8, 8))\n\nax.plot(x, x+1, 'r--')\nax.plot(x, x+2, 'b-')\nax.plot(x, x+3, 'y.-')\nax.plot(x, x+4, 'go:')\nplt.show()\n\n\n\n\n\n\n\n\n\nfig, ax = plt.subplots(figsize=(8, 8))\n\nax.plot(x, x+1, color='green', alpha=0.8, linewidth=5, linestyle='-', marker='o', markersize=10,\n        markerfacecolor='#CCFFCC')\nax.plot(x, x+2, color='blue', linewidth=8, linestyle='--', marker='x')\nax.plot(x, x+3, color='#66FF66', linewidth=3, linestyle='dashed', marker='v')\nax.plot(x, x+4, color='#CCFFCC', linewidth=2, linestyle=':', marker='p')\nplt.show()",
     "crumbs": [
@@ -89,7 +89,7 @@
   {
     "objectID": "matplotlib/07_Bar_plot.html",
     "href": "matplotlib/07_Bar_plot.html",
-    "title": "Bar Plot",
+    "title": "7  Bar Plot",
     "section": "",
     "text": "import matplotlib.pyplot as plt\nimport numpy as np\n\n\ncountry = ['INDIA', 'JAPAN', 'MEXICO', 'COLOMBIA', 'GERMANY']\npopulation = [1000, 800, 900, 1000, 300]\n\nBarras verticales\n\nplt.bar(country, population, width=0.5, color=['red', 'blue']) # width para ancho de columnas\nplt.xticks(np.arange(5), ('India', 'Japon', 'Mexico', 'Colombia', 'Alemania'), rotation=45)\nplt.show()\n\n\n\n\n\n\n\n\nBarras Horizontales\n\nplt.barh(country, population)\nplt.show()\n\n\n\n\n\n\n\n\nReto\n\nplt.bar(country, population, width=0.5, color='cyan') # width para ancho de columnas\nplt.xticks(np.arange(5), ('India', 'Japon', 'Mexico', 'Colombia', 'Alemania'))\nplt.title('Gráfico de barras de población')\nplt.xlabel('Países')\nplt.ylabel('Población')\nplt.show()",
     "crumbs": [
@@ -100,9 +100,9 @@
   {
     "objectID": "matplotlib/08_Otros_graficos.html",
     "href": "matplotlib/08_Otros_graficos.html",
-    "title": "Otros Gráficos",
+    "title": "8  Otros Gráficos",
     "section": "",
-    "text": "Histograma\nplt.hist(data, bins=10, histtype='bar')\nplt.show()\nplt.hist(data, bins=10, histtype='step')\nplt.show()",
+    "text": "8.1 Histograma\nplt.hist(data, bins=10, histtype='bar')\nplt.show()\nplt.hist(data, bins=10, histtype='step')\nplt.show()",
     "crumbs": [
       "Matplotlib",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Otros Gráficos</span>"
@@ -111,9 +111,9 @@
   {
     "objectID": "matplotlib/08_Otros_graficos.html#boxplot",
     "href": "matplotlib/08_Otros_graficos.html#boxplot",
-    "title": "Otros Gráficos",
-    "section": "Boxplot",
-    "text": "Boxplot\n\nplt.boxplot(data, vert=False, patch_artist=True, notch=True)\nplt.show()\n\n\n\n\n\n\n\n\n\noutliers = [75, 100, 150, 200]\ndata = np.append(data, outliers)\nplt.boxplot(data, vert=False, patch_artist=True, notch=True, showfliers=True)\nplt.show()",
+    "title": "8  Otros Gráficos",
+    "section": "8.2 Boxplot",
+    "text": "8.2 Boxplot\n\nplt.boxplot(data, vert=False, patch_artist=True, notch=True)\nplt.show()\n\n\n\n\n\n\n\n\n\noutliers = [75, 100, 150, 200]\ndata = np.append(data, outliers)\nplt.boxplot(data, vert=False, patch_artist=True, notch=True, showfliers=True)\nplt.show()",
     "crumbs": [
       "Matplotlib",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Otros Gráficos</span>"
@@ -122,9 +122,9 @@
   {
     "objectID": "matplotlib/08_Otros_graficos.html#scatter",
     "href": "matplotlib/08_Otros_graficos.html#scatter",
-    "title": "Otros Gráficos",
-    "section": "Scatter",
-    "text": "Scatter\n\nN = 50\nx = np.random.rand(N)\ny = np.random.rand(N)\narea = (30 * np.random.rand(N)) ** 2\ncolors = np.random.rand(N)\n\n\nplt.scatter(x, y, s=area, c=colors, marker='o', alpha=0.5)\nplt.show()",
+    "title": "8  Otros Gráficos",
+    "section": "8.3 Scatter",
+    "text": "8.3 Scatter\n\nN = 50\nx = np.random.rand(N)\ny = np.random.rand(N)\narea = (30 * np.random.rand(N)) ** 2\ncolors = np.random.rand(N)\n\n\nplt.scatter(x, y, s=area, c=colors, marker='o', alpha=0.5)\nplt.show()",
     "crumbs": [
       "Matplotlib",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Otros Gráficos</span>"
@@ -133,7 +133,7 @@
   {
     "objectID": "seaborn/01_set.html",
     "href": "seaborn/01_set.html",
-    "title": "Set",
+    "title": "10  Set",
     "section": "",
     "text": "Sirve para configurar en las gráficas el estilo, paleta de colores, tipo de fuente, etc.\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\nsns.barplot(x=['A', 'B', 'C'], y=[1, 3, 2])\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.set_theme(style='dark', palette='dark', font='Verdana', font_scale=1)\nsns.barplot(x=['A', 'B', 'C'], y=[1, 3, 2])\nplt.show()",
     "crumbs": [
@@ -271,6 +271,28 @@
     "crumbs": [
       "Seaborn",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Seaborn</span>"
+    ]
+  },
+  {
+    "objectID": "matplotlib/03_orientado_a_objetos.html#pyplot",
+    "href": "matplotlib/03_orientado_a_objetos.html#pyplot",
+    "title": "3  Método orientado a objetos",
+    "section": "",
+    "text": "Rápido\nFácil\nUna sola figura",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Método orientado a objetos</span>"
+    ]
+  },
+  {
+    "objectID": "matplotlib/03_orientado_a_objetos.html#orientado-a-objetos",
+    "href": "matplotlib/03_orientado_a_objetos.html#orientado-a-objetos",
+    "title": "3  Método orientado a objetos",
+    "section": "3.2 Orientado a objetos",
+    "text": "3.2 Orientado a objetos\n\nMayor personalización\nMás código\nMás amigable a múltiples diagramas\n\nUn objeto define una figura, esa figura es un lienzo en el cual podemos introducri diferenctes gráficas(axes), de las cuales cada una posee sus propios ejes (axis).\nLa figura representa el todo, dentro de ella vamos a configurara gráficas las cuales conteine diferentes ejes.\n\n\n\nimage.png\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n\nx = np.linspace(0, 5, 11)\ny = x ** 2\n\n\n3.2.1 Método orientado a objetos\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.5, 0.9])\naxes.plot(x, y, 'b')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\2545703584.py:4: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()\n\n\n\n\n\n\n\n\n\nEsta forma me da ventajas cuando quiero hacer algo más específico.\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.8, 0.9]) # [ubicacion ubicacion tamaño tamaño]\naxes2 = fig.add_axes([0.2, 0.55, 0.4, 0.3])\n\naxes.plot(x, y, 'b')\naxes2.plot(y, x, 'r')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\1999792158.py:7: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()\n\n\n\n\n\n\n\n\n\n\nfig = plt.figure()\naxes = fig.add_axes([0.1, 0.1, 0.8, 0.9])\naxes2 = fig.add_axes([0.2, 0.55, 0.4, 0.3])\n\naxes.plot(x, y, 'b')\naxes2.plot(y, x, 'r')\naxes2.set_facecolor('gray')\nfig.show()\n\nC:\\Users\\Edwin Reyes\\AppData\\Local\\Temp\\ipykernel_24528\\1237668884.py:8: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  fig.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Método orientado a objetos</span>"
     ]
   }
 ]
