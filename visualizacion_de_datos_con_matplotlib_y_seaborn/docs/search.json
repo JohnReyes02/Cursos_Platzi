@@ -294,5 +294,49 @@
       "Matplotlib",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Método orientado a objetos</span>"
     ]
+  },
+  {
+    "objectID": "seaborn/03_Distribuciones.html#diagrama-de",
+    "href": "seaborn/03_Distribuciones.html#diagrama-de",
+    "title": "12  Distribuiciones",
+    "section": "12.3 Diagrama de",
+    "text": "12.3 Diagrama de\n\nsns.ecdfplot(data=tips, x='tip', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.ecdfplot(data=tips, x='tip', hue='sex', stat='count')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Distribuiciones</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/03_Distribuciones.html#diagrama-de-acumulaci",
+    "href": "seaborn/03_Distribuciones.html#diagrama-de-acumulaci",
+    "title": "12  Distribuiciones",
+    "section": "12.3 Diagrama de Acumulaci",
+    "text": "12.3 Diagrama de Acumulaci\n\nsns.ecdfplot(data=tips, x='tip', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.ecdfplot(data=tips, x='tip', hue='sex', stat='count')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Distribuiciones</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/03_Distribuciones.html#diagrama-de-acumulacion",
+    "href": "seaborn/03_Distribuciones.html#diagrama-de-acumulacion",
+    "title": "12  Distribuiciones",
+    "section": "12.3 Diagrama de Acumulacion",
+    "text": "12.3 Diagrama de Acumulacion\n\nsns.ecdfplot(data=tips, x='tip', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.ecdfplot(data=tips, x='tip', hue='sex', stat='count')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Distribuiciones</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/03_Distribuciones.html#diagrama-de-acumulación",
+    "href": "seaborn/03_Distribuciones.html#diagrama-de-acumulación",
+    "title": "12  Distribuiciones",
+    "section": "12.3 Diagrama de Acumulación",
+    "text": "12.3 Diagrama de Acumulación\n\nsns.ecdfplot(data=tips, x='tip', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.ecdfplot(data=tips, x='tip', hue='sex', stat='count')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Distribuiciones</span>"
+    ]
   }
 ]

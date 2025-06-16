@@ -36,6 +36,10 @@ book:
         - seaborn/01_set.ipynb
         - seaborn/02_parametros.ipynb
         - seaborn/03_Distribuciones.ipynb
+        - seaborn/04_Categoricos.ipynb
+        - seaborn/05_Relation.ipynb
+        - seaborn/06_Joinplot_y_pairplot.ipynb
+        - seaborn/07_Heatmap.ipynb
 
 format:
   html:
