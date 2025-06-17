@@ -338,5 +338,126 @@
       "Seaborn",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Distribuiciones</span>"
     ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html",
+    "href": "seaborn/04_Categoricos.html",
+    "title": "13  Categóricos",
+    "section": "",
+    "text": "13.1 Countplot\nsns.countplot(data=tips, x='day', hue='sex')\nplt.show()\nsns.countplot(data=tips, y='day', hue='sex')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html#stripplot",
+    "href": "seaborn/04_Categoricos.html#stripplot",
+    "title": "13  Categóricos",
+    "section": "13.2 Stripplot",
+    "text": "13.2 Stripplot\n\nsns.stripplot(data=tips, x='day', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.stripplot(data=tips, x='day', y='total_bill', hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.stripplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nplt.show()\n\n\n\n\n\n\n\n\nTambién se puede modificar su tamaño\n\nplt.figure(figsize=(6, 6))\nsns.stripplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html#swarmplot",
+    "href": "seaborn/04_Categoricos.html#swarmplot",
+    "title": "13  Categóricos",
+    "section": "13.3 Swarmplot",
+    "text": "13.3 Swarmplot\nUna mejor forma de ver la concentración de los datos\n\nplt.figure(figsize=(6, 6))\nsns.swarmplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html#boxplot",
+    "href": "seaborn/04_Categoricos.html#boxplot",
+    "title": "13  Categóricos",
+    "section": "13.4 Boxplot",
+    "text": "13.4 Boxplot\nDistribución estadística por cuartiles\n\nplt.figure(figsize=(6, 6))\nsns.boxplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nplt.show()\n\n\n\n\n\n\n\n\nTambién se puede combinar con otro tipo de gráfico. A continuación se muestra la combinación del boxplot con el swarmplot\n\nplt.figure(figsize=(6, 6))\nsns.boxplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nsns.swarmplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True, \n              palette='dark:0', marker='&lt;')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html#violinplot",
+    "href": "seaborn/04_Categoricos.html#violinplot",
+    "title": "13  Categóricos",
+    "section": "13.5 Violinplot",
+    "text": "13.5 Violinplot\n\nplt.figure(figsize=(6, 6))\nsns.violinplot(data=tips, x='day', y='total_bill', hue='sex', palette='pastel')\nplt.show()\n\n\n\n\n\n\n\n\nPara combinarlos en un solo gráfico se puede usar el parámetro split\n\nplt.figure(figsize=(6, 6))\nsns.violinplot(data=tips, x='day', y='total_bill', hue='sex', split=True, palette='pastel')\nplt.show()\n\n\n\n\n\n\n\n\nPuede ser usado solo para variables numéricas\n\nsns.violinplot(data=tips, y='total_bill')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/04_Categoricos.html#catplot",
+    "href": "seaborn/04_Categoricos.html#catplot",
+    "title": "13  Categóricos",
+    "section": "13.6 Catplot",
+    "text": "13.6 Catplot\n\nsns.catplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True)\nplt.show()\n\n\n\n\n\n\n\n\nPodemos cambiar el gráfico, modificando el parámetro kind\n\nsns.catplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True, kind='swarm')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.catplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True, kind='box')\nplt.show()\n\n\n\n\n\n\n\n\nPuedo tambier graficar en columnas con el parámetro col\n\nsns.catplot(data=tips, x='day', y='total_bill', hue='sex', dodge=True, kind='box', col='time')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Categóricos</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/05_Relation.html",
+    "href": "seaborn/05_Relation.html",
+    "title": "14  Relación",
+    "section": "",
+    "text": "14.1 Scatterplot\nsns.scatterplot(data=tips, x='total_bill', y='tip');\nSe puede segmentar con el parámetro hue:\nsns.scatterplot(data=tips, x='total_bill', y='tip', hue='day');\nPodemos usar otra categoria con el parámetro style\nsns.scatterplot(data=tips, x='total_bill', y='tip', hue='day', style='time')\nplt.show()\nSe puede usar el parámetro size para tener en la gráfica el número de comensales\nsns.scatterplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size')\nplt.show()\nSe puede modificar la ubicación de la leyenda\nsns.scatterplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size')\nplt.legend(loc='center', bbox_to_anchor=(1.12,0.5))\nplt.show()\nTambién se pueden predefinir los marcadores con el parámetro markers\nplt.figure(figsize=(8, 8))\nmarkers= {'Lunch':'D', 'Dinner':'s'}\nsns.scatterplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size',\n                markers=markers)\nplt.legend(loc='center', bbox_to_anchor=(1.12,0.5))\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Relación</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/05_Relation.html#lineplot",
+    "href": "seaborn/05_Relation.html#lineplot",
+    "title": "14  Relación",
+    "section": "14.2 Lineplot",
+    "text": "14.2 Lineplot\n\nsns.lineplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size')\nplt.legend(loc='center', bbox_to_anchor=(1.12,0.5))\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Relación</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/05_Relation.html#relplot",
+    "href": "seaborn/05_Relation.html#relplot",
+    "title": "14  Relación",
+    "section": "14.3 Relplot",
+    "text": "14.3 Relplot\n\nsns.relplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.relplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size', kind='line')\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.relplot(data=tips, x='total_bill', y='tip', hue='day', style='time', size='size', kind='scatter', col='time')\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Relación</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/06_Joinplot_y_pairplot.html",
+    "href": "seaborn/06_Joinplot_y_pairplot.html",
+    "title": "15  Joinplot y Pairplot",
+    "section": "",
+    "text": "15.1 Joinplot\nUne dos distintas gráficas en usa sola, para análisis. Un diagrama de dispersión y una distribución.\nsns.jointplot(data=tips, x='total_bill', y='tip')\nplt.show()\nsns.jointplot(data=tips, x='total_bill', y='tip', hue='sex')\nplt.show()\nSe puede usar el parámetro kind para diferentes gráficos\nsns.jointplot(data=tips, x='total_bill', y='tip', hue='sex', kind='hist')\nplt.show()\nsns.jointplot(data=tips, x='total_bill', y='tip', hue='sex', kind='kde')\nplt.show()\nsns.jointplot(data=tips, x='total_bill', y='tip', hue='sex', kind='hist', marginal_ticks=True)\nplt.show()\nsns.jointplot(data=tips, x='total_bill', y='tip', hue='sex', kind='hist', marginal_ticks=True,\n              marginal_kws=dict(bins=25, fill=False, multiple='dodge'))\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Joinplot y Pairplot</span>"
+    ]
+  },
+  {
+    "objectID": "seaborn/06_Joinplot_y_pairplot.html#pairplot",
+    "href": "seaborn/06_Joinplot_y_pairplot.html#pairplot",
+    "title": "15  Joinplot y Pairplot",
+    "section": "15.2 Pairplot",
+    "text": "15.2 Pairplot\nSe usa para encontrar relaciones de variables numéricas\n\nsns.pairplot(data=tips)\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.pairplot(data=tips, hue='sex')\nplt.show()\n\n\n\n\n\n\n\n\nPuede usarse el parámetro palette para escoger un color diferente\n\nsns.pairplot(data=tips, hue='sex', palette='coolwarm')\nplt.show()\n\n\n\n\n\n\n\n\nPuede usarse el parámetro corner para evitar que se dupliquen los gráficos\n\nsns.pairplot(data=tips, hue='sex', corner=True)\nplt.show()\n\n\n\n\n\n\n\n\n\nsns.pairplot(data=tips, hue='sex', corner=True, kind='scatter')\nplt.show()\n\n\n\n\n\n\n\n\nLas gráficas generadas con joinploty pairplot son útiles para dar una mirada rápida a un conjunto de datos.",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Joinplot y Pairplot</span>"
+    ]
   }
 ]
