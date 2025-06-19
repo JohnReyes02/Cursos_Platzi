@@ -459,5 +459,16 @@
       "Seaborn",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Joinplot y Pairplot</span>"
     ]
+  },
+  {
+    "objectID": "seaborn/07_Heatmap.html",
+    "href": "seaborn/07_Heatmap.html",
+    "title": "16  Heatmap",
+    "section": "",
+    "text": "16.1 Heatmap\nÚtil para graficar datos en una estructura matricial.\nsns.heatmap(tips.corr(numeric_only=True))\nplt.show()\nEl parámetro annot permite mostrar los valores de cada celda en el gráfico.\nsns.heatmap(tips.corr(numeric_only=True), annot=True)\nplt.show()\nEl parámetro cmap permite cambiar el esquema de colores del gráfico.\nsns.heatmap(tips.corr(numeric_only=True), annot=True, cmap=\"coolwarm\")\nplt.show()\nEl parámetro linewidths permite cambiar el grosor de las líneas que separan las celdas.\nsns.heatmap(tips.corr(numeric_only=True), annot=True, cmap=\"coolwarm\", linewidths=5)\nplt.show()\nEl parámetro linecolor permite cambiar el color de las líneas que separan las celdas.\nsns.heatmap(tips.corr(numeric_only=True), annot=True, cmap=\"coolwarm\", linewidths=5, linecolor='black')\nplt.show()\nLos parámetros vmin y vmax permiten establecer los valores mínimo y máximo del mapa de calor, respectivamente.\nsns.heatmap(tips.corr(numeric_only=True), annot=True, cmap=\"coolwarm\", linewidths=5, linecolor='black',\n            vmin=0, vmax=1)\nplt.show()\nEl parámetro cbar permite mostrar o ocultar la barra de color.\nsns.heatmap(tips.corr(numeric_only=True), annot=True, cmap=\"coolwarm\", linewidths=5, linecolor='black',\n            vmin=0, vmax=1, cbar=False)\nplt.show()",
+    "crumbs": [
+      "Seaborn",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Heatmap</span>"
+    ]
   }
 ]
